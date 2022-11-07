@@ -143,7 +143,14 @@ a:hover {
   animation: fill-animation3 5s forwards infinite;
   width: 10%;
 }
-/* @media screen and (max-width: 720px) {
-  .skillbar {
+.image{
+  height: 25rem;
+}
+@media screen and (max-width: 720px) {
+  .flipcards{
+    width: 100%;
   }
-} */
+}
+@media screen and (min-width: 300px){
+
+}
