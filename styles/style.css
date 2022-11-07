@@ -107,15 +107,15 @@ a:hover {
   /* skillbar animation */
 @keyframes fill-animation1 {
   from{left:1%;}
-  to{width: 90%;}
+  to{width: 99%;}
 }
 @keyframes fill-animation2 {
   from{left:1%;}
-  to{width: 65%;}
+  to{width: 80%;}
 }
 @keyframes fill-animation3 {
   from{left:1%;}
-  to{width: 80%;}
+  to{width: 90%;}
 }
 .skillbar {
   background-color: black;
@@ -143,3 +143,7 @@ a:hover {
   animation: fill-animation3 5s forwards infinite;
   width: 10%;
 }
+/* @media screen and (max-width: 720px) {
+  .skillbar {
+  }
+} */
