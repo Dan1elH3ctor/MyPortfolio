@@ -6,10 +6,33 @@
     box-sizing: border-box;
     font-family: 'Aclonica', sans-serif;
 }
+/* header background gif */
 header, footer {
     background-image: url(https://i.makeagif.com/media/5-08-2016/8L7xX8.gif);
     background-size: cover;
 }
+/* image sizing projects */
+.portfolio img, .lifechoices img {
+  width: 7rem;
+}
+/* project images appear linear */
+.projects {
+  display: flex;
+  justify-content: space-between;
+}
+/* image border animation */
+.image {
+  border: 5px solid red;
+  animation: Color 1s infinite;
+}
+@keyframes Color {
+  10% {border: 5px solid red;}
+  30%{border: 5px solid orange;}
+  50%{border: 5px solid yellow;}
+  70%{border: 5px solid lime;}
+  100%{border: 5px solid green;}
+}
+
 /* animation */
 li:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -35,8 +58,88 @@ a:hover {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
-  @keyframes turn {
-    0% {transform: translate(5px, 5px) rotate(10deg);}
-    15% {transform: translate(-5px, -5px) rotate(30deg);}
-
+/* flip-cards */
+.flipcards {
+    background-color: darkgray;
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+    
+}
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
   }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: crimson;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  /* skillbar animation */
+@keyframes fill-animation1 {
+  from{left:1%;}
+  to{width: 90%;}
+}
+@keyframes fill-animation2 {
+  from{left:1%;}
+  to{width: 65%;}
+}
+@keyframes fill-animation3 {
+  from{left:1%;}
+  to{width: 80%;}
+}
+.skillbar {
+  background-color: black;
+  height: 25px;
+  border-radius: 10px;
+}
+.HTML5 {
+  color: rgb(255, 255, 255);
+  background-color: darkcyan;
+  border-radius: 10px;
+  animation: fill-animation1 5s forwards infinite;
+  width: 10%;
+}
+.CSS {
+  color: rgb(255, 255, 255);
+  background-color: lightcoral;
+  border-radius: 10px;
+  animation: fill-animation2 5s forwards infinite;
+  width: 10%;
+}
+.Bootstrap {
+  color: rgb(255, 255, 255);
+  background-color: darkorchid;
+  border-radius: 10px;
+  animation: fill-animation3 5s forwards infinite;
+  width: 10%;
+}
